@@ -36,8 +36,8 @@ Bubble randomBubble(int radius) {
 
         .radius = radius,
 
-        .velocity.x = randomVelocity(-10, 10, 2),
-        .velocity.y = randomVelocity(-10, 10, 2),
+        .velocity.x = randomVelocity(-10, 10, 100),
+        .velocity.y = randomVelocity(-10, 10, 100),
 
         .color = randomColor(0.6, 0.7),
     };
