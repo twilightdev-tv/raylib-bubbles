@@ -118,6 +118,11 @@ void resolveCollision(BubbleLinkedList bubble_list) {
     // Bubble collision
     for (BubbleNode *bubble_a = bubble_list.head; bubble_a; bubble_a = bubble_a->next) {
         for (BubbleNode *bubble_b = bubble_list.head; bubble_b; bubble_b = bubble_b->next) {
+            if (bubble_a == bubble_b) {
+                // Same bubble
+                continue;
+            }
+
             Bubble a = bubble_a->bubble, b = bubble_b->bubble;
 
             if (CheckCollisionCircles(a.position, a.radius, b.position, b.radius)) {
